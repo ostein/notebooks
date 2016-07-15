@@ -12,11 +12,11 @@ def clone(repo):
     os.system('cd /tmp && git clone ' + repo)
     print "[done] "
 
-if os.path.exists('/tmp'):
-    shutil.rmtree('/tmp')
-    os.makedirs('/tmp')
-else:
-    os.makedirs('/tmp')
+# if os.path.exists('/tmp'):
+#     shutil.rmtree('/tmp')
+#     os.makedirs('/tmp')
+# else:
+#     os.makedirs('/tmp')
 
 print "Revision:", commands.getstatusoutput("git reflog | head -n 1")[1]
 
